@@ -1,0 +1,27 @@
+repositories:
+  - name: traefik
+    url: https://traefik.github.io/charts
+  - name: victoria-metrics
+    url: https://victoriametrics.github.io/helm-charts
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
+  - name: kubernetes-dashboard
+    url: https://kubernetes.github.io/dashboard/
+
+releases:
+  - name: traefik
+    disableValidation: true
+    namespace: kube-system
+    chart: traefik/traefik
+    values:
+      - "values/traefik.yaml"
+  - name: victoria-metrics
+    namespace: monitoring
+    chart: victoria-metrics/victoria-metrics-single
+    values:
+      - "values/victoria-metrics.yaml"
+  - name: grafana
+    namespace: monitoring
+    chart: grafana/grafana
+    values:
+      - "values/grafana.yaml"
