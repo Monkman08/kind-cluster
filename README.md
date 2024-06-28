@@ -1,6 +1,6 @@
 # KIND Cluster Configuration
 
-This repository contains the configuration for a Kubernetes in Docker (KIND) cluster. The cluster consists of a control-plane node and three worker nodes, running Kubernetes version 1.30.
+This repository contains the configuration for a Kubernetes in Docker (KIND) cluster. The cluster consists of a control-plane node and three worker nodes, running Kubernetes version 1.30..
 
 ## Components
 
